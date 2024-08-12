@@ -15,7 +15,7 @@ echo 'export PATH=$PATH:/usr/local/go/bin' | sudo tee -a /etc/profile
 # echo 'source completed' | sudo source /etc/profile
 # echo 'source completed' | sudo reboot
 # sudo reboot
-. /etc/profile
+sudo . /etc/profile
 go version
 
 
