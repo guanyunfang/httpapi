@@ -12,9 +12,9 @@ sudo tar -C /usr/local -xzf go1.21.5.linux-amd64.tar.gz
 cd /usr/local
 
 echo 'export PATH=$PATH:/usr/local/go/bin' | sudo tee -a /etc/profile
-bash
 # echo 'source completed' | sudo source /etc/profile
-echo 'source completed' | sudo reboot
+# echo 'source completed' | sudo reboot
+sudo reboot
 go version
 
 
