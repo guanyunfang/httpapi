@@ -9,29 +9,10 @@ wget -c -t 0 -T 1200 https://studygolang.com/dl/golang/go1.21.5.linux-amd64.tar.
 
 sudo tar -C /usr/local -xzf go1.21.5.linux-amd64.tar.gz
 
-mv go $install_path
+cd /usr/local
 
-if cat ~/.bash_profile | grep 'export GOROOT=' >>/dev/null 2>&1; then
-    echo "GOROOT is $GOROOT now"
-    echo -e "if you want to change it ,run command :\n"
-    echo "export GOROOT=${install_path} >>~/.bash_profile"
-    echo "export GOPATH=${HOME}/gopath >>~/.bash_profile"
-    echo "export PATH=\${GOROOT}/bin:\${GOPATH}/bin:\$PATH >>~/.bash_profile"
-else
-    # set environment
-    echo "export GOROOT=${install_path}" >>~/.bash_profile
-    echo "export GOPATH=${HOME}/gopath" >>~/.bash_profile
-    echo "export PATH=\${GOROOT}/bin:\${GOPATH}/bin:\$PATH" >>~/.bash_profile
-fi
-# source the env setting
-source ~/.bash_profile
+echo 'export PATH=$PATH:/usr/local/go/bin' | sudo tee -a /etc/profile
+source /etc/profile
 
-# set go mod
-go env -w GO111MODULE=on
-# set go mod proxy
-go env -w GOPROXY=https://goproxy.cn,direct
-# show version
-go version
 
-echo "You need run \" source ~/.bash_profile \" again !"
 
