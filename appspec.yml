@@ -14,7 +14,7 @@ hooks:
     - location: /home/ec2-user/httpapi/starthttpapi.sh
       timeout: 300
       runas: root
-  ApplicationStop:
-    - location: /home/ec2-user/httpapi/killhttpapi.sh
-      timeout: 300
-      runas: root
+ # ApplicationStop:
+ #   - location: /home/ec2-user/httpapi/killhttpapi.sh
+ #     timeout: 300
+ #     runas: root
