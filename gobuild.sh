@@ -9,6 +9,9 @@ cd /home/ec2-user/httpapi
 go mod tidy
 # 清理之前的构建（可选）
 go clean
+
+go env -w GOFLAGS=-buildvcs=false
+
 # 构建项目
 go build -o httpapi
 # 打印构建结果
