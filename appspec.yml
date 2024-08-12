@@ -6,16 +6,16 @@ os: linux
     
 hooks:
   BeforeInstall:
-    - location: /home/ec2-user/httpapi/install_dependencies.sh
+    - location: httpapi/install_dependencies.sh
       timeout: 300
       runas: root
-    - location: /home/ec2-user/httpapi/gobuild.sh
+    - location: httpapi/gobuild.sh
       timeout: 300
       runas: root
-    - location: /home/ec2-user/httpapi/starthttpapi.sh
+    - location: httpapi/starthttpapi.sh
       timeout: 300
       runas: root
  # ApplicationStop:
- #   - location: /home/ec2-user/httpapi/killhttpapi.sh
+ #   - location: httpapi/killhttpapi.sh
  #     timeout: 300
  #     runas: root
