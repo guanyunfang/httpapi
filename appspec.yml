@@ -1,18 +1,18 @@
 version: 0.0
 os: linux
-#files:
-#  - source: /main.go
-#    destination: /home/ec2-user/httpapi/
+files:
+  - source: /
+    destination: /home/ec2-user/httpapi
     
 hooks:
   BeforeInstall:
-    - location: httpapi/install_dependencies.sh
+    - location: install_dependencies.sh
       timeout: 300
       runas: root
-    - location: httpapi/gobuild.sh
+    - location: gobuild.sh
       timeout: 300
       runas: root
-    - location: httpapi/starthttpapi.sh
+    - location: starthttpapi.sh
       timeout: 300
       runas: root
  # ApplicationStop:
