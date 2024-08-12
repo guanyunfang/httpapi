@@ -2,7 +2,7 @@
 yum install -y httpd
 sudo apt-get install wget
 
-go_version="1.14.linux-amd64"
+go_version="1.22.linux-amd64"
 install_path="/opt/go"
 # download golang on studygolang mirror
 wget -c -t 0 -T 1200 https://studygolang.com/dl/golang/go${go_version}.tar.gz
