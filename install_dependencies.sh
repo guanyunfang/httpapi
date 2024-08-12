@@ -13,6 +13,7 @@ cd /usr/local
 
 echo 'export PATH=$PATH:/usr/local/go/bin' | sudo tee -a /etc/profile
 echo 'source completed' | source /etc/profile
+go version
 
 
 
