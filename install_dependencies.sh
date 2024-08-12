@@ -2,12 +2,12 @@
 yum install -y httpd
 sudo apt-get install wget
 
-go_version="1.22.linux-amd64"
-install_path="/opt/go"
-# download golang on studygolang mirror
-wget -c -t 0 -T 1200 https://studygolang.com/dl/golang/go${go_version}.tar.gz
 
-tar zxvf go${go_version}.tar.gz
+install_path="/usr/local"
+# download golang on studygolang mirror
+wget -c -t 0 -T 1200 https://studygolang.com/dl/golang/go1.21.5.linux-amd64.tar.gz
+
+sudo tar -C /usr/local -xzf go1.21.5.linux-amd64.tar.gz
 
 mv go $install_path
 
