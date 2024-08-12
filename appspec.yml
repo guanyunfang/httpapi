@@ -1,8 +1,9 @@
 version: 0.0
 os: linux
-files:
-  - source: /main.go
-    destination: /home/ec2-user/httpapi/
+#files:
+#  - source: /main.go
+#    destination: /home/ec2-user/httpapi/
+    
 hooks:
   BeforeInstall:
     - location: /home/ec2-user/httpapi/install_dependencies.sh
