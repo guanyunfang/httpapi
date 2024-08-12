@@ -5,7 +5,7 @@ files:
     destination: /home/ec2-user/httpapi/
 hooks:
   BeforeInstall:
-    - location: /home/ec2-user/httpapi/install_dependencies
+    - location: /home/ec2-user/httpapi/install_dependencies.sh
       timeout: 300
       runas: root
     - location: /home/ec2-user/httpapi/gobuild.sh
