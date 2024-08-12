@@ -5,7 +5,7 @@ sudo apt-get install wget
 
 install_path="/usr/local"
 # download golang on studygolang mirror
-wget -c -t 0 -T 1200 https://studygolang.com/dl/golang/go1.21.5.linux-amd64.tar.gz
+wget https://dl.google.com/go/go1.21.5.linux-amd64.tar.gz
 
 sudo tar -C /usr/local -xzf go1.21.5.linux-amd64.tar.gz
 
